@@ -32,6 +32,9 @@ public class BookServiceTest {
         reqDto.setTitle("스프링1강");
         reqDto.setAuthor("메타코딩");
 
+        Book bookEntity = bookRepository.save(reqDto.toEntity());
+        System.out.println(bookEntity.getTitle());
+
         // stub (행동 정의 = 가설)
         Mockito.when(bookRepository.save(reqDto.toEntity())).thenReturn(new Book(1L, "스프링1강", "메타코딩"));
 
