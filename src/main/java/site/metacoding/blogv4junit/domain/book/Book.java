@@ -8,9 +8,11 @@ import javax.persistence.Id;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 // 클라이언트한테 받아서 데이터를 넣을때만 set함. DB에서 가져와서 데이터를 넣으면 set하지 않음.
 @EqualsAndHashCode // 주소 비교를 안하고, 값만 비교한다.
+@NoArgsConstructor
 @Getter
 @Entity
 public class Book {
